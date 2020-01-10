@@ -5,7 +5,7 @@ class App extends React.Component {
   componentDidMount = () => {
     const start = init();
     console.log('start', start);
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     mainLoop(start.renderer, start.scene, start.camera);
   };
